@@ -3,11 +3,26 @@
     cursor: pointer;
     & > img {
       width: 300px;
+
       border-radius: 20px;
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
       -ms-border-radius: 20px;
       -o-border-radius: 20px;
+
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.031);
+        -webkit-transform: scale(1.031);
+        -moz-transform: scale(1.031);
+        -ms-transform: scale(1.031);
+        -o-transform: scale(1.031);
+        box-shadow: 0 1px 6px #ccc;
+      }
     }
   }
   &-name {
