@@ -1,0 +1,17 @@
+.btn {
+  background-image: linear-gradient(to left, orange, rgb(153, 104, 104));
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  &:active {
+    opacity: 0.8;
+  }
+}
+.counter {
+  font-size: 20px;
+  margin-left: 40px;
+}
+.counter-block {
+  margin-top: 50px;
+}

@@ -1,0 +1,15 @@
+.lesson {
+  padding: 40px;
+  &-item {
+    margin: 20px 0;
+    background-color: rgb(168, 167, 158);
+    border: 1px solid #000;
+    list-style: none;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    &__active {
+      background-color: rgb(68, 163, 84);
+    }
+  }
+}

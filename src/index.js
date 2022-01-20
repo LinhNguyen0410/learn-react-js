@@ -1,17 +1,35 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import store from './app/store';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+// custom event fake chat app , must put it in global (window)
+function emitComment(id) {
+  setInterval(() => {
+    window.dispatchEvent(
+      new CustomEvent(`lesson-${id}`, {
+        detail: `Linh commented for lesson-${id}`,
+      })
+    );
+  }, 2000);
+}
+emitComment(1);
+emitComment(2);
+emitComment(3);
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -92,8 +92,16 @@ function TodoFeature(props) {
         })
     }
 
-    const handleTodoFormSubmit = (value) => {
-        console.log('value form', value);
+    const handleTodoFormSubmit = (values) => {
+        // console.log('value form', values);
+        const newTodo = {
+            id: listTodo.length + 1,
+            title: values.title,
+            status: 'new'
+        }
+        const newTodoList = [...listTodo, newTodo]
+
+        setTodoList(newTodoList)
     }
 
     // dùng useMemo có ý nghĩ khi 2 cái state kia nó thay đổi thì mình mới re-render lại còn ko thì thôi dữ cái memozination cũ...
